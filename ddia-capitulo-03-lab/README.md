@@ -194,5 +194,3 @@ Você foi encarregado de implementar um sistema de pedidos onde não existe UPDA
 > De que forma essa arquitetura atende à definição exata de CQRS: *"uma representação separada, otimizada para leitura e derivada de uma representação otimizada para gravação"*?
 
 ---
-
-*Com esse r
