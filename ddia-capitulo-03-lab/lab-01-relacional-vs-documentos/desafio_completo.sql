@@ -164,12 +164,3 @@ select * from usuarios_documento,
 -- optei por definir um alias para as experiências
 lateral jsonb_array_elements(perfil->'experiencias_profissionais') as exp
 where exp->> 'empresa' in ('tech solutions', 'data corp');
-
-/**
-O nome institucional sendo alterado em um modelo completamente relacional seria muito mais simples de lidar 
-visto que seria necessário apenas informar a coluna, porém ela tem um custo de leitura maior pois precisa passar por todos os dados, além de joins e tabelas terceiras 
-associadas ao usuário gerando resultados em produto cartesiano. 
-Agora sobre o segundo modelo, a sua leitura é muito mais performática mesmo que o design de buscas possa ser menos legível a primeira vista, 
-porém é nítido que se formos comparar entre ambos modelos, esse modelo de SQL seria muito mais claro e menos verboso ao longo do crescimento de 
-relacionamentos das tabelas entre si.
-*/
