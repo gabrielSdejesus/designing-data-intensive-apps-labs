@@ -25,3 +25,12 @@ Além disso, pessoas nascem em cidades e mantêm conexões de amizade entre si.
 
 > 💡 **Ponto de Reflexão para o seu README:**  
 > Compare o tamanho e a complexidade cognitiva da query Cypher contra o `WITH RECURSIVE` em SQL. Por que o livro defende que modelos de grafos de propriedades são muito mais adequados quando o número de saltos em uma relação é indefinido?
+
+Alguns pontos observados para o modelo de grafos:
+   1 - Com vértices e arestas criadas para tal associação, o modelo de consulta é muito mais legível e simplificado.
+   2 - A performance em atingir o requerido é mais nítida com relação ao esperado.
+   3 - É muito mais simple lidar com múltiplas relações associadas entre diversos vértices.
+Pontos observados para o modelo relacional:
+   1 - É muito mais complexo lidar com CTE Recursivo considerando legibilidade da consulta.
+   2 - Ainda que com CTE RECURSIVE seja mais simples de atingir tal objetivo de lidar com hierarquias, ele ainda faz diversas consultas N vezes para achar relacionamentos.
+   3 - É muito mais complexo lidar com múltiplos relacionamentos entre si que tem diversas hierarquias.
